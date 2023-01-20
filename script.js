@@ -30,7 +30,7 @@ console.log(coordinates);
 map.fitBounds(coordinates,{padding: [50, 50], maxZoom: 18});
 
 var customIcon = L.icon({
-    iconUrl: 'https://imgyukle.com/f/2023/01/21/J4ytXc.png',
+    iconUrl: '1.png',
     iconSize: [38, 95]
 });
 
@@ -53,7 +53,7 @@ marker5.on('move', function() {
 
 // Create a custom icon for the starting point marker
 var startMarkerIcon = L.icon({
-    iconUrl: 'https://imgyukle.com/f/2023/01/21/J4CJu8.png',
+    iconUrl: '2.png',
     iconSize: [38, 95],
     iconAnchor: [22, 94],
     popupAnchor: [-3, -76]
@@ -61,7 +61,7 @@ var startMarkerIcon = L.icon({
     
     // Create a custom icon for the ending point marker
     var endMarkerIcon = L.icon({
-    iconUrl: 'https://www.farmhack.nl/wp-content/uploads/2018/12/Naturalis-Biodiversity-Center-logo-2012.png',
+    iconUrl: '3.png',
     iconSize: [38, 95],
     iconAnchor: [22, 94],
     popupAnchor: [-3, -76]
