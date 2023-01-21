@@ -5,12 +5,13 @@ var map = new L.Map('map', {
 });
 
 // create a new tile layer
-var tileUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+var tileUrl = 'https://tile.thunderforest.com/pioneer/{z}/{x}/{y}.png?apikey=d33b5a212e9c4e5d8e2de8953b42c044',
+
 layer = new L.TileLayer(tileUrl,
 {
-    attribution: 'Maps © <a href=\"www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors',
-    maxZoom: 18
-});
+    maxZoom: 20,
+}).addTo(map);
+
 
 // add the layer to the map
 map.addLayer(layer);
@@ -39,11 +40,11 @@ var marker5 = L.Marker.movingMarker(
     coordinates,
     10000, {autostart: true, icon: customIcon}).addTo(map);
 
-    var polyline = L.polyline([coordinates[0]], {color: 'black'}).addTo(map);
+    var polyline = L.polyline([coordinates[0]], {color: 'green', weight:8}).addTo(map);
 
 // add a station for each coordinate in the array
 for (var i = 0; i < coordinates.length; i++) {
-    marker5.addStation(i, 0.4);
+    marker5.addStation(i, 0.2);
 }
 
 marker5.on('move', function() {
